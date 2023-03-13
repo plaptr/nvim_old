@@ -1,8 +1,9 @@
 
-function ColorMyPencils(color)
-	color = color or "onedark"	
-	vim.cmd.colorscheme(color)
-end
+--function ColorMyPencils(color)
+	--color = color or "onedark"	
+	--vim.cmd.colorscheme(color)
+--end
 
-ColorMyPencils()
+--ColorMyPencils()
 
+vim.cmd('colorscheme rose-pine')
