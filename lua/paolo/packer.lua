@@ -12,16 +12,23 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-
+  use 'm4xshen/autoclose.nvim'
   --  use "olimorris/onedarkpro.nvim"
   use({ 'rose-pine/neovim', as = 'rose-pine' })
 
 
+  use('p00f/nvim-ts-rainbow')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
 
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
