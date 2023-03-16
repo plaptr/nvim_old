@@ -16,7 +16,10 @@ return require('packer').startup(function(use)
   --  use "olimorris/onedarkpro.nvim"
   use({ 'rose-pine/neovim', as = 'rose-pine' })
 
-
+  use {
+      "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  }
   use('p00f/nvim-ts-rainbow')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('theprimeagen/harpoon')
