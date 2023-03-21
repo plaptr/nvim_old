@@ -61,9 +61,16 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
+
 lsp.setup()
 
 vim.diagnostic.config({
     virtual_text = true
 })
+
+local snip = require("luasnip")
+vim.keymap.set("i", "<Tab>", function() snip.jump(1) end, opts);
+vim.keymap.set("s", "<Tab>", function() snip.jump(1) end, opts);
+vim.keymap.set("i", "<S-Tab>", function() snip.jump(-1) end, opts);
+vim.keymap.set("s", "<S-Tab>", function() snip.jump(-1) end, opts);
 
