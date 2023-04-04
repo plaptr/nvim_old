@@ -6,4 +6,5 @@
 
 --ColorMyPencils()
 
-vim.cmd('colorscheme rose-pine')
+-- vim.cmd('colorscheme rose-pine')
+require("onedark").load()
